@@ -3,23 +3,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Systèmes Nord - Custom PC Builds</title>
+  <title>Système Nord - Custom PC Builds</title>
+  <style>
+    /* Nord Palette */
+    :root {
+      --polar-night: #2E3440;
+      --snow-storm: #D8DEE9;
+      --frost: #88C0D0;
+      --aurora-green: #A3BE8C;
+      --aurora-red: #BF616A;
+    }
+
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background-color: var(--polar-night);
+      color: var(--snow-storm);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: var(--frost);
+      margin-bottom: 0.5rem;
+    }
+    p {
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    /* Form styling */
+    form {
+      background-color: #3B4252; /* slightly lighter than background */
+      padding: 1.5rem 2rem;
+      border-radius: 8px;
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(136, 192, 208, 0.3);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+      color: var(--snow-storm);
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1.5px solid var(--frost);
+      border-radius: 5px;
+      background-color: var(--polar-night);
+      color: var(--snow-storm);
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--aurora-green);
+      background-color: #434C5E;
+    }
+
+    button {
+      margin-top: 1rem;
+      background-color: var(--aurora-green);
+      color: var(--polar-night);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover,
+    button:focus {
+      background-color: var(--aurora-red);
+      color: var(--snow-storm);
+      outline: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+      form {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Systèmes Nord</h1>
+  <h1>Welcome to Système Nord</h1>
   <p>Custom PC builds with northern precision. Get in touch!</p>
 
   <h2>Contact Us</h2>
   <form action="https://formspree.io/f/meokqqgo" method="POST">
-    <label for="name">Name:</label><br />
-    <input type="text" id="name" name="name" required placeholder="Your name" /><br /><br />
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required placeholder="Your name" />
 
-    <label for="email">Your email:</label><br />
-    <input type="email" id="email" name="email" required placeholder="you@example.com" /><br /><br />
+    <label for="email">Your email:</label>
+    <input type="email" id="email" name="email" required placeholder="you@example.com" />
 
-    <label for="message">Your message:</label><br />
+    <label for="message">Your message:</label>
     <textarea id="message" name="message" rows="4" required
-      placeholder="Hi! I’m interested in having a custom PC built. Here are my needs and preferences..."></textarea><br /><br />
+      placeholder="Hi! I’m interested in having a custom PC built. Here are my needs and preferences..."></textarea>
 
     <button type="submit">Send</button>
   </form>
